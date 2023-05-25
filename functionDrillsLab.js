@@ -339,12 +339,35 @@ console.log(totalFrogs2)
 
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
+let sampleArray = [0,1,2,3,4,7,5,8,9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
-//CODE HERE
+// function sortAscending(array10) {
+//   let sortedArray = array10.slice().sort();
+//   console.log(sortedArray)
+//   console.log(array10)
+//   for (let i = 0; i < array10.length; i++) {
+//     if (array10[i] !== sortedArray[i]) {
+//         return false;
+//     }
+//   }
+//   return true
+// }
+// let arrayIsAscending = sortAscending(sampleArray);
+// console.log(arrayIsAscending);
+
+function sortAscending(array10) {
+  for (let i = 0; i < array10.length; i++) {
+    if (array10[i] > array10[i + 1]) {
+        return false;
+    }
+  }
+  return true
+}
+let arrayIsAscending = sortAscending(sampleArray);
+console.log(arrayIsAscending);
 
 
 ////////////////// PROBLEM 22 ////////////////////
@@ -369,13 +392,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["sailorDuck", "rubberDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["realDuck", "duck"]
