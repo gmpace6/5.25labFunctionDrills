@@ -117,7 +117,7 @@ const exclaimTwo = str => {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
+console.log('arrow')
 // console.log('declaration')
 // console.log('expression')
 
@@ -128,7 +128,8 @@ const exclaimTwo = str => {
   Brownie points if you use a template string
 */
 
-
+const exclaimThree = str => `${str.toUpperCase()}!!!`
+console.log(exclaimThree("yay"))
 
 ////////////////// PROBLEM 9 ////////////////////
 
@@ -142,7 +143,7 @@ function exclaimFour(str) {
 }
 
 // console.log('arrow')
-// console.log('declaration')
+console.log('declaration')
 // console.log('expression')
 
 
@@ -155,8 +156,17 @@ function exclaimFour(str) {
   Create a variable called 'nameGreeting' and set it equal to your function invoked (called) passing in an argument.
 */
 
-//CODE HERE
-
+function nameCheck(NAMEPARAM) {
+  if(NAMEPARAM === "Steven") {
+    return 'What is up Steven?'
+  } else if(NAMEPARAM === "Bryan") {
+    return 'Hey Bryan!'
+  } else {
+    return 'Cool name, ' + NAMEPARAM
+  }
+}
+let nameGreeting = nameCheck("Garrett")
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 11 ////////////////////
 /*
