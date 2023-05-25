@@ -178,7 +178,20 @@ console.log(nameGreeting)
   Create a variable called 'colorRating' and set it equal to faveColorFinder invoked (called), passing in an argument.
 */
 
-//CODE HERE
+function faveColorFinder(color) {
+  if(color === "red") {
+    return 'red is a great color'
+  } else if(color === "green") {
+    return 'green is a solid favorite color'
+  } else if(color === "black") {
+    return 'so trendy'
+  } else {
+    return 'you need to evaluate your favorite color choice'
+  }
+}
+let colorRating = faveColorFinder("yellow")
+console.log(colorRating)
+
 
 
 ////////////////// PROBLEM 12 ////////////////////
@@ -189,8 +202,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Call the function, passing in the `namesArr` array (above).
 */
 
-//CODE HERE
-
+function printAllNames(arr1) {
+  for(let i = 0; i < arr1.length; i++) {
+    console.log(arr1[i])
+  }
+}
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -200,8 +217,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
   Outside the function, create a variable called `oddChecker` and set it equal to your function invoked, making sure to pass in an argument.
 */
 
-//CODE HERE
-
+function thatsOdd (num) {
+  if(num % 2 === 0) {
+    return `That's not odd!`
+  } else {
+    return 'That is odd indeed!'
+  }
+}
+let oddChecker = thatsOdd(6)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 14 ////////////////////
 
@@ -213,7 +237,8 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
     we would expect the function to return 'Sharknado is the best movie ever!'
 */
 
-//CODE HERE
+const bestMovie = MOVEIEPARAM => `${MOVEIEPARAM} is the best movie ever!`
+console.log(bestMovie("The Princess Bride")) 
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -227,7 +252,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
   Return the answers array inside of the function to a variable called `arrayEvaluator`.
 */
 
-//CODE HERE
+function bigOrSmall(arr) {
+  let answers = []
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 100) {
+      answers.push('big')
+    } else {
+      answers.push('small')
+    }
+  }
+  return answers
+}
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -238,8 +275,15 @@ let loser = 'Glimmer'
   The function should loop over the array of contestant names. If the loser string appears in the array, splice it out. Return the new contestants array.
 */
 
-//CODE HERE
-
+function theEliminator(array, string) {
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] === string) {
+      array.splice(i, 1)
+    }
+  }
+  return array
+}
+console.log(theEliminator(contestants, loser))
 
 ////////////////// PROBLEM 17 ////////////////////
 let sampleString = "Hi, my name is Kylo."
