@@ -11,7 +11,10 @@
   Call the function.
 */
 
-//CODE HERE
+function helloWorld() {
+  console.log('Hello, World!')
+}
+helloWorld()
 
 
 ////////////////// PROBLEM 2 ////////////////////
@@ -20,7 +23,8 @@
     Write an arrow function called 'jsNinja' that returns the string: 'I am a JavaScript ninja!'
 */
 
-//CODE HERE
+const jsNinja = () => 'I am a JavaScript ninja!'
+console.log(jsNinja())
 
 
 ////////////////// PROBLEM 3 ////////////////////
@@ -30,20 +34,20 @@
   Call the function, passing in an argument.
 */
 
-//CODE HERE
+const printName = (name) => console.log(name)
+printName('Garrett')
 
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
-  Create a function called greeting that
-  accepts name as its only parameter.
-  greeting should log the string 'Hello, '
-  plus the value of the name parameter.
+  Create a function called greeting that accepts name as its only parameter.
+  greeting should log the string 'Hello, ' plus the value of the name parameter.
   Ex. If Jake were passed in as the argument, the function would log 'Hello, Jake'
   Make sure to call your function and pass in an argument.
 */
 
-//CODE HERE
+const greeting = name1 => console.log("Hello, " + name1)
+greeting("Jake")
 
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -57,7 +61,18 @@
     Brownie points if you use a ternary statement (only spend significant time on this if you have wiggle room)
 */
 
-//CODE HERE
+const compareNums = (num1, num2) => {
+  if(num1 > num2) {
+    return num1
+  } else if (num1 < num2) {
+    return num2
+  } else {
+    return "numbers are equal"
+  }
+}
+console.log(compareNums(1,3))
+console.log(compareNums(3,7))
+console.log(compareNums(7,7))
 
 
 ////////////////// PROBLEM 6 ////////////////////
@@ -65,11 +80,14 @@
   Create a function called add that takes in two parameters 
   Inside, convert the arguments to be numbers (just in case strings get sent in)
   The add function should RETURN the two parameters added together.
-  Create a variable outside the function called 'sum' and set it equal to add invoked (called), passing in 2 arguments.
+  Create a variable outside the function called 'sum' and set it equal to add invoked called), passing in 2 arguments.
 */
 
-//CODE HERE
-
+function add(number1, number2) {
+  return +number1 + +number2
+}
+sum = add('2', '2')
+console.log(sum)
 
 ////////////////// PROBLEM 7 ////////////////////
 
