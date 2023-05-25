@@ -292,19 +292,27 @@ let sampleString = "Hi, my name is Kylo."
   Invoke the function, passing in the sampleString (above).
 */
 
-//CODE HERE
+const ren = string => console.log(string.toUpperCase())
+ren(sampleString)
+
 
 
 ////////////////// PROBLEM 18 ////////////////////
 /*
-  Write a function called emailCheck that takes in
-  one parameter - email.
-  Inside the function, convert the email param into 
-  a string and trim off any excess whitespace.
-  Check to make sure the email contains an '@' symbol.
-  If it does, return 'email verified' and if doesn't, 
-  return 'must provide a valid email address'
+  Write a function called emailCheck that takes in one parameter - email.
+  Inside the function, convert the email param into a string and trim off any excess whitespace.
+  Check to make sure the email contains an '@' symbol. If it does, return 'email verified' and if doesn't, return 'must provide a valid email address'
 */
+
+function emailCheck(email) {
+  if(email.includes('@')) {
+    return email.trim()
+} else {
+  return "must provide a valid email address"
+}
+}
+console.log(emailCheck(   "helloooo@hotmail.com"     ))
+console.log(emailCheck(   "helloooohotmail.com"     ))
 
 ////////////////// PROBLEM 19 ////////////////////
 /*
@@ -312,15 +320,22 @@ let sampleString = "Hi, my name is Kylo."
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
-//CODE HERE
-
+function hogsmeade(gold) {
+  return Math.floor(gold  / 3) + ` golden frogs, with ${gold % 3} gold left over`
+}
+let totalFrogs = hogsmeade(19)
+console.log(totalFrogs)
 
 ////////////////// PROBLEM 20 ////////////////////
 /*
   You might have noticed a slight bug in the previous problem. If you were to pass in 4 gold, the function would return to you 1.3333... However, you can't really go to a store and by 1.333 products. You would just be able to purchase 1 product. Re-write the function you used in the previous problem (give it the same name, just add a 2 to the end of it) that fixes this bug. Invoke the function and store the returned value to a variable called `totalFrogs2`.
 */
 
-//CODE HERE
+function hogsmeade2() {
+  return "I accidentally already did this! 100 points to Gryffindor!"
+}
+let totalFrogs2 = hogsmeade2()
+console.log(totalFrogs2)
 
 
 ////////////////// PROBLEM 21 ////////////////////
